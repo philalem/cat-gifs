@@ -1,4 +1,6 @@
 import React from 'react';
+import '../styles/cat-gif.scss';
+
 
 class CatGif extends React.Component {
     constructor(props) {
@@ -9,11 +11,19 @@ class CatGif extends React.Component {
 		console.log("inrender:", this.props.data);
 
         return (
-            <div>
-                { this.props.data.map((item, index) => (
-                    // <p>{item.images.preview_gif.url}</p>
-                    <img key={index} src={item.images.preview_gif.url} alt="" />
-                ))}
+            <div className="container">
+                <div className="gif-grid">
+                    { this.props.data.map((item, index) => (
+                        <div className="gif-container">
+                            {/* <p>{item.images.preview_gif.url}</p> */}
+                            <img key={index} src={item.images.preview_webp.url} alt="" />
+                        </div>
+                    ))}
+                </div>
+                
+                <div className="btn-wrapper">
+                    <button onClick={this.fetchData}>More GIFS</button>
+                </div>
             </div>
         );
     }

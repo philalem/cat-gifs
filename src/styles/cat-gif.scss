@@ -1,0 +1,41 @@
+body{
+    background-color: black;
+    .container {
+        width: 90%;
+        margin: 20px auto;
+        .gif-grid {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(5, 1fr);
+        
+            .gif-container{
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .btn-wrapper{
+            padding-top: 20px;
+            text-align: center;
+            button{
+                color: #FFF;
+                border: none;
+                font-size: 20px;
+                padding: 15px 30px;
+                border-radius: 8px;
+                background-color: #FDB120;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body{
+        .container {
+            .gif-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
