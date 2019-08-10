@@ -5,7 +5,7 @@ import '../styles/cat-gif.scss';
 class CatGif extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.state = {}
     }
     render() { 
 		console.log("inrender:", this.props.data);
@@ -22,7 +22,7 @@ class CatGif extends React.Component {
                 </div>
                 
                 <div className="btn-wrapper">
-                    <button onClick={this.fetchData}>More GIFS</button>
+                    <button onClick={this.props.fetchData}>More GIFS</button>
                 </div>
             </div>
         );
