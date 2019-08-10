@@ -11,13 +11,19 @@ class CatGif extends React.Component {
 		console.log("inrender:", this.props.data);
 
         return (
-            <div className="gif-grid">
-                { this.props.data.map((item, index) => (
-                    <div className="gif-container">
-                        {/* <p>{item.images.preview_gif.url}</p> */}
-                        <img key={index} src={item.images.preview_webp.url} alt="" />
-                    </div>
-                ))}
+            <div className="container">
+                <div className="gif-grid">
+                    { this.props.data.map((item, index) => (
+                        <div className="gif-container">
+                            {/* <p>{item.images.preview_gif.url}</p> */}
+                            <img key={index} src={item.images.preview_webp.url} alt="" />
+                        </div>
+                    ))}
+                </div>
+                
+                <div className="btn-wrapper">
+                    <button>More GIFS</button>
+                </div>
             </div>
         );
     }
