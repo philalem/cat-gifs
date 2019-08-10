@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 class CatGif extends React.Component {
     constructor(props) {
@@ -7,9 +6,14 @@ class CatGif extends React.Component {
         this.state = {  }
     }
     render() { 
+		console.log("inrender:", this.props.data);
+
         return (
             <div>
-
+                { this.props.data.map((item, index) => (
+                    // <p>{item.images.preview_gif.url}</p>
+                    <img key={index} src={item.images.preview_gif.url} alt="" />
+                ))}
             </div>
         );
     }
