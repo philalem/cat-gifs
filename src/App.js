@@ -17,6 +17,8 @@ class App extends React.Component {
 		this.fetchData()
 	}
 	fetchData(){
+		// console.log('button working')
+
 		const setData = (gifs) => this.setState({ gifs });
 
 		// Make a request for a user with a given ID
@@ -26,7 +28,15 @@ class App extends React.Component {
 				q: 'cat',
 				limit: 10
 			}
-		  })
+		})
+
+		// axios.get('https://api.giphy.com/v1/gifs/random', {
+		// 	params: {
+		// 		api_key: 'm2FFtrSUnoPO1WYbu3TbXzuZFTpFAA4S',
+		// 		tag: 'burrito'
+		// 		// limit: 10
+		// 	}
+		// })
 		.then(function (response) {
 			// handle success
 			// console.log(response.data.data);
@@ -44,7 +54,7 @@ class App extends React.Component {
 		// console.log("inrender:", this.state.gifs);
 		return (
 				<div>
-					<CatGif data = {this.state.gifs} />
+					<CatGif data = {this.state.gifs} fetchData = {this.fetchData} />
 				</div>
 			);
 	}
