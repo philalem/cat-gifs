@@ -17,7 +17,7 @@ class CatGif extends React.Component {
                         <div className="gif-container">
                             {/* <p>{item.images.preview_gif.url}</p> */}
                             {/* <img key={index} src={item.images.preview_webp.url} alt="" /> */}
-                            <img key={index} src={item.images.fixed_width.url} alt="as" />
+                            <img key={index} src={item.images.fixed_width.url} alt="" />
                         </div>
                     ))}
                 </div>
