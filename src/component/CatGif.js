@@ -23,7 +23,7 @@ class CatGif extends React.Component {
                 </div>
                 
                 <div className="btn-wrapper">
-                    <button onClick={this.props.fetchData}>More GIFS</button>
+                    <button onClick={this.props.fetchData}>Refresh</button>
                 </div>
             </div>
         );
