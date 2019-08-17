@@ -16,7 +16,8 @@ class CatGif extends React.Component {
                     { this.props.data.map((item, index) => (
                         <div className="gif-container">
                             {/* <p>{item.images.preview_gif.url}</p> */}
-                            <img key={index} src={item.images.preview_webp.url} alt="" />
+                            {/* <img key={index} src={item.images.preview_webp.url} alt="" /> */}
+                            <img key={index} src={item.images.fixed_width.url} alt="as" />
                         </div>
                     ))}
                 </div>
