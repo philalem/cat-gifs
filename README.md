@@ -46,4 +46,7 @@ Or if you want to use buildkit indefinitely, add this to your daemon.json
 }
 ```
 
+To remove all images, containers, volumes, etc.
+`docker system prune`
+
 Credit to AnsariAbdullah for the react app.
