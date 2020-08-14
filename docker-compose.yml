@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   sample:
-    cats: react-random-cat-gif-generator
+    container_name: cats
     build:
       context: .
       dockerfile: Dockerfile

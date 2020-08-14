@@ -1,8 +1,8 @@
 # pull official base image
 FROM node:13.12.0-alpine
 
-RUN COMPOSE_DOCKER_CLI_BUILD=1 
-RUN DOCKER_BUILDKIT=1
+# RUN COMPOSE_DOCKER_CLI_BUILD=1 
+# RUN DOCKER_BUILDKIT=1
 
 # set working directory
 WORKDIR /app
