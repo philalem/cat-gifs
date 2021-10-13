@@ -10,7 +10,6 @@ class App extends React.Component {
     this.state = {
       gifs: [],
       // loading: true
-      // test comment
     };
     this.fetchData = this.fetchData.bind(this);
   }
